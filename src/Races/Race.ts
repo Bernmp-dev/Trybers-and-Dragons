@@ -1,5 +1,6 @@
 abstract class Race {
   private static racesInstace = 0;
+  public abstract get maxLifePoints(): number;
 
   constructor(
     private _name: string,
@@ -22,8 +23,6 @@ abstract class Race {
     }
     throw new Error('Not implemented');
   }
-
-  public abstract get maxLifePoints(): number;
 }
 
 export default Race;
