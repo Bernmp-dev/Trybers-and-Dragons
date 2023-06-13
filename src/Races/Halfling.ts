@@ -10,7 +10,7 @@ class Halfling extends Race {
     Halfling._orcInstances += 1;
   }
 
-  public get maxLifePoints(): number {
+  get maxLifePoints(): number {
     return this._maxLifePoints;
   }
 

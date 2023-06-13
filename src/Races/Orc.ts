@@ -10,7 +10,7 @@ class Orc extends Race {
     Orc._orcInstances += 1;
   }
 
-  public override get maxLifePoints(): number {
+  get maxLifePoints(): number {
     return this._maxLifePoints;
   }
 
