@@ -9,9 +9,9 @@ class PVP extends Battle {
     this._playerTurn = player;
   }
 
-  switchTurn(): void {
-    this._playerTurn = (this._playerTurn === this.player)
-      ? this.player2 : this.player;
+  switchTurn(): Fighter {
+    this._playerTurn = this.player ? this.player2 : this.player;
+    return this.player ? this.player2 : this.player;
   }
 
   fight(): number {
@@ -19,7 +19,7 @@ class PVP extends Battle {
       this.player.attack(this.player2);
       this.player2.attack(this.player);
       this.switchTurn();
-    } while (this._playerTurn.lifePoints > -1);
+    } while (this._playerTurn.lifePoints >= 0);
 
     return super.fight();
   }
